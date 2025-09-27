@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - MAELYS RESTAURANY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MAELYS RESTAURANT</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="menu.html">Menu</a>
+            <a href="apropos.html">A propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Notre menu</h2>
+            <!--Barre de recherche-->
+            <input type="text" id="search" placeholder="Recherche un plat ...">
+            <!--Plats e grille-->
+            <div class="menu-grid">
+                <div class="plat">
+                    <img src="images/waterfufuanderu.jpg" alt="Water Fufu And Eru">
+                    <h3>Water Fufu And Eru</h3>
+                    <p>A base d'okock, huile de palme et viandes de boeuf et accompagnes de water fufu 5000FCFA </p>
+                    <button class="btn" onclick="window.location.href='contact.html'">Commander</button>
+                </div>
+                <div class="plat">
+                    <img src="images/taro.jpg" alt="Taro">
+                    <h3>Taro</h3>
+                    <p>A base de taro de la viandes de boeuf et accompagné de la sauce jaune 4000 FCFA</p>
+                    <button class="btn" onclick="window.location.href='contact.html'">Commander</button>
+                </div>
+                <div class="plat">
+                    <img src="images/nkondre.jpg" alt="Nkondre">
+                    <h3>Nkondre</h3>
+                    <p>plantains non murs et viandes de porc 3000FCFA</p>
+                    <button class="btn" onclick="window.location.href='contact.html'">Commander</button>
+                </div>
+                <div class="plat">
+                    <img src="images/o'kock.jpg" alt="o'kock avec le manioc">
+                    <h3>o'kock avec le manioc</h3>
+                    <p>a base de feuilles d'o'kock de viandes de boeuf et accompagneés de manioc 3500FCFA</p>
+                    <button class="btn" onclick="window.location.href='contact.html'">Commander</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MAELYS RESTAURANT</p>
+    </footer>
+    <script>
+        const searchInput =
+        document.gelElementById('search');
+        const plats=
+        document.querySelectorAll('.plat');
+        searchInput.addEventListener('keyup',
+        function() {
+            let filter =argumentssearcheInput.value.toLowerCase();
+            plats.forEach(function(plats) {
+                let text =
+                plat.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    plat.style.display ="";
+                } else {
+                    plat.style.display = "none";
+                }
+            } ) ;
+        } )  ;
+        
+    </script>
+</body>
+</html>
